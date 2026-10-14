@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Safiya Packers & Movers</title>
+
+  <!-- Google Fonts & Font Awesome (same as original) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* ===== ROOT VARIABLES (identical to original) ===== */
+    :root {
+      --orange: #ff6500;
+      --orange-dark: #e95700;
+      --blue: #073b70;
+      --blue-light: #edf6ff;
+      --white: #ffffff;
+      --text: #24364b;
+      --muted: #66758a;
+      --border: #e5edf5;
+      --shadow: 0 12px 35px rgba(7, 59, 112, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--orange);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      color: var(--blue);
+      font-size: clamp(28px, 3.3vw, 42px);
+      line-height: 1.2;
+      letter-spacing: -1.2px;
+      margin-bottom: 16px;
+    }
+
+    .section-title span {
+      color: var(--orange);
+    }
+
+    .section-description {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-heading .section-description {
+      margin: 0 auto;
+    }
+
+    /* ===== BUTTONS (exactly as original) ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 23px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      border: 2px solid transparent;
+      transition: 0.25s ease;
+    }
+
+    .btn-outline {
+      background: var(--white);
+      color: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .btn-outline:hover {
+      background: var(--blue);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* ===== SERVICES (exactly as original) ===== */
+    .services-section {
+      background: white;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 45px rgba(7, 59, 112, 0.12);
+    }
+
+    .service-image-wrap {
+      position: relative;
+      overflow: hidden;
+      height: 220px;
+      background: var(--blue-light);
+    }
+
+    .service-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover .service-image {
+      transform: scale(1.06);
+    }
+
+    .service-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 7px 11px;
+      border-radius: 7px;
+      background: var(--orange);
+      color: white;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .service-content {
+      padding: 23px;
+    }
+
+    .service-content h3 {
+      color: var(--blue);
+      font-size: 18px;
+      line-height: 1.4;
+      margin-bottom: 11px;
+    }
+
+    .service-content p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--orange);
+      color: white;
+      border-radius: 9px;
+      padding: 11px 17px;
+      font-size: 12px;
+      font-weight: 700;
+      transition: 0.25s;
+    }
+
+    .service-link:hover {
+      background: var(--blue);
+      transform: translateX(3px);
+    }
+
+    .services-bottom {
+      text-align: center;
+      margin-top: 36px;
+    }
+
+    /* ===== REVEAL ANIMATION (base) ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE (exactly as original) ===== */
+    @media (max-width: 1000px) {
+      .service-grid {
+        gap: 18px;
+      }
+
+      .service-image-wrap {
+        height: 190px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .section {
+        padding: 58px 0;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .service-image-wrap {
+        height: 160px;
+      }
+
+      .service-content {
+        padding: 16px;
+      }
+
+      .service-content h3 {
+        font-size: 15px;
+      }
+
+      .service-content p {
+        font-size: 12px;
+      }
+
+      .service-link {
+        padding: 10px 12px;
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        width: 91%;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-image-wrap {
+        height: 215px;
+      }
+
+      .service-content h3 {
+        font-size: 17px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== SERVICES (complete, unchanged markup) ===== -->
+  <section class="section services-section" id="services">
+    <div class="container">
+
+      <div class="section-heading reveal">
+        <span class="section-label">Our Services</span>
+        <h2 class="section-title">
+          Moving Solutions <span>Across Pune</span>
+        </h2>
+        <p class="section-description">
+          Looking for packers and movers in Pune or Hadapsar?
+          Contact us to discuss your moving and transportation needs.
+        </p>
+      </div>
+
+      <div class="service-grid">
+
+        <article class="service-card reveal">
+          <div class="service-image-wrap">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?auto=format&fit=crop&w=700&q=80"
+              alt="Packing household goods"
+              loading="lazy"
+            >
+            <span class="service-tag">Pune</span>
+          </div>
+          <div class="service-content">
+            <h3>Best Packers and Movers in Pune</h3>
+            <p>Get in touch for packing, relocation and transportation requirements in Pune.</p>
+            <a href="#" class="service-link enquiry-btn" data-service="Best packers and movers in Pune">
+              Enquire Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-image-wrap">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80"
+              alt="Moving and transporting goods"
+              loading="lazy"
+            >
+            <span class="service-tag">Hadapsar</span>
+          </div>
+          <div class="service-content">
+            <h3>Best Packers and Movers in Hadapsar</h3>
+            <p>Discuss your local shifting needs with our team in Hadapsar, Pune.</p>
+            <a href="#" class="service-link enquiry-btn" data-service="Best packers and movers in Hadapsar">
+              Enquire Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-image-wrap">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=700&q=80"
+              alt="Goods transportation truck"
+              loading="lazy"
+            >
+            <span class="service-tag">Transportation</span>
+          </div>
+          <div class="service-content">
+            <h3>Best Packers and Movers Near Me</h3>
+            <p>Contact us to check service availability for your pickup and destination.</p>
+            <a href="#" class="service-link enquiry-btn" data-service="Best packers and movers near me">
+              Enquire Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-image-wrap">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80"
+              alt="Home interior and furniture ready for relocation"
+              loading="lazy"
+            >
+            <span class="service-tag">Home Moving</span>
+          </div>
+          <div class="service-content">
+            <h3>Packers and Movers in Pune</h3>
+            <p>Ask about relocation support for household and office goods in Pune.</p>
+            <a href="#" class="service-link enquiry-btn" data-service="Packers and movers in Pune">
+              Enquire Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-image-wrap">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80"
+              alt="Furniture and home items"
+              loading="lazy"
+            >
+            <span class="service-tag">Local Moving</span>
+          </div>
+          <div class="service-content">
+            <h3>Packers and Movers in Hadapsar</h3>
+            <p>Plan your next move with a team serving the Hadapsar area.</p>
+            <a href="#" class="service-link enquiry-btn" data-service="Packers and movers in Hadapsar">
+              Enquire Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-image-wrap">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=700&q=80"
+              alt="Commercial goods transport"
+              loading="lazy"
+            >
+            <span class="service-tag">Goods Moving</span>
+          </div>
+          <div class="service-content">
+            <h3>Packers and Movers Near Me</h3>
+            <p>Reach out for information about your moving and goods transport needs.</p>
+            <a href="#" class="service-link enquiry-btn" data-service="Packers and movers near me">
+              Enquire Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="services-bottom reveal">
+        <a
+          href="https://safiya-packers-movers.grexa.site/products-services"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline"
+        >
+          View All Services
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SCRIPT (WhatsApp enquiry + reveal animation, exactly as original) ===== -->
+  <script>
+    // WHATSAPP ENQUIRY HANDLER
+    const whatsappNumber = "918698017041";
+
+    document.querySelectorAll(".enquiry-btn").forEach(function(button) {
+      button.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        const service = this.dataset.service;
+
+        const message =
+          "Hello Safiya Packers & Movers, I would like to enquire about: " +
+          service +
+          ". Please share more details.";
+
+        const whatsappURL =
+          "https://wa.me/" +
+          whatsappNumber +
+          "?text=" +
+          encodeURIComponent(message);
+
+        window.open(whatsappURL, "_blank", "noopener,noreferrer");
+      });
+    });
+
+    // SCROLL REVEAL ANIMATION
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12
+      });
+
+      revealElements.forEach(function(element) {
+        observer.observe(element);
+      });
+    } else {
+      revealElements.forEach(function(element) {
+        element.classList.add("visible");
+      });
+    }
+
+    // PREVENT EMPTY SERVICE LINKS FROM NAVIGATING
+    document.querySelectorAll('a[href="#"]').forEach(function(link) {
+      if (!link.classList.contains("enquiry-btn")) {
+        link.addEventListener("click", function(event) {
+          event.preventDefault();
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

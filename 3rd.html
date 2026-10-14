@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>At a Glance — Safiya Packers & Movers</title>
+
+  <!-- Google Fonts & Font Awesome (same as original) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* ===== ROOT VARIABLES (identical to original) ===== */
+    :root {
+      --orange: #ff6500;
+      --orange-dark: #e95700;
+      --blue: #073b70;
+      --blue-light: #edf6ff;
+      --white: #ffffff;
+      --text: #24364b;
+      --muted: #66758a;
+      --border: #e5edf5;
+      --shadow: 0 12px 35px rgba(7, 59, 112, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* ===== AT A GLANCE (exactly as original) ===== */
+    .glance-section {
+      padding: 82px 0;
+    }
+
+    .glance-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .glance-heading {
+      padding: 32px 35px 24px;
+      background: linear-gradient(110deg, #fff6ef, white 75%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .glance-heading h2 {
+      color: var(--blue);
+      font-size: clamp(25px, 3vw, 34px);
+      letter-spacing: -1px;
+    }
+
+    .glance-heading h2 span {
+      color: var(--orange);
+    }
+
+    .glance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr 1fr 0.8fr;
+      gap: 0;
+    }
+
+    .glance-item {
+      padding: 30px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      border-right: 1px solid var(--border);
+    }
+
+    .glance-item:last-child {
+      border-right: none;
+    }
+
+    .glance-icon {
+      width: 44px;
+      height: 44px;
+      background: #fff0e5;
+      color: var(--orange);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .glance-item h3 {
+      color: var(--blue);
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+
+    .glance-item p,
+    .glance-item address {
+      font-size: 12px;
+      color: var(--muted);
+      font-style: normal;
+      overflow-wrap: anywhere;
+    }
+
+    .glance-item a {
+      color: var(--orange-dark);
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .rating-stars {
+      color: #f5a623;
+      font-size: 13px;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+    }
+
+    /* ===== REVEAL ANIMATION (base) ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE (exactly as original) ===== */
+    @media (max-width: 1000px) {
+      .glance-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .glance-item:nth-child(2) {
+        border-right: none;
+      }
+
+      .glance-item:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .glance-heading {
+        padding: 25px 22px;
+      }
+
+      .glance-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .glance-item,
+      .glance-item:nth-child(2) {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 23px;
+      }
+
+      .glance-item:last-child {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== AT A GLANCE (complete, unchanged markup) ===== -->
+  <section class="glance-section">
+    <div class="container">
+      <div class="glance-card reveal">
+
+        <div class="glance-heading">
+          <!--<span class="section-label">At a glance</span>-->
+          <h2><span>Safiya</span> Packers &amp; Movers</h2>
+        </div>
+
+        <div class="glance-grid">
+
+          <div class="glance-item">
+            <div class="glance-icon">
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+            <div>
+              <h3>What We Do</h3>
+              <p>Moving Supply Shop and transportation services.</p>
+            </div>
+          </div>
+
+          <div class="glance-item">
+            <div class="glance-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <h3>Our Location</h3>
+              <address>
+                Survey No. 165, Sadesatara, Nali Road, near Datta
+                Temple, Malwadi, Hadapsar, Pune, Maharashtra 411028.
+              </address>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Safiya+Packers+and+Movers+Hadapsar+Pune"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Directions <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="glance-item">
+            <div class="glance-icon">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <div>
+              <h3>Business Hours</h3>
+              <p>Monday – Sunday</p>
+              <p><strong>Open 24 hours</strong></p>
+            </div>
+          </div>
+
+          <div class="glance-item">
+            <div class="glance-icon">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div>
+              <h3>Customer Rating</h3>
+              <div class="rating-stars">★★★★★</div>
+              <p><strong>4.8 / 5</strong></p>
+              <p>Based on 127+ Google reviews*</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVEAL ANIMATION SCRIPT (exactly as original, only for .reveal) ===== -->
+  <script>
+    (function() {
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12
+        });
+
+        revealElements.forEach(function(element) {
+          observer.observe(element);
+        });
+      } else {
+        revealElements.forEach(function(element) {
+          element.classList.add("visible");
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

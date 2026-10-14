@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Section — Safiya Packers & Movers</title>
+
+  <!-- Google Fonts & Font Awesome (same as original) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* ===== ROOT VARIABLES (identical to original) ===== */
+    :root {
+      --orange: #ff6500;
+      --orange-dark: #e95700;
+      --blue: #073b70;
+      --blue-light: #edf6ff;
+      --white: #ffffff;
+      --text: #24364b;
+      --muted: #66758a;
+      --border: #e5edf5;
+      --shadow: 0 12px 35px rgba(7, 59, 112, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    button, a {
+      font-family: inherit;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--orange);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      color: var(--blue);
+      font-size: clamp(28px, 3.3vw, 42px);
+      line-height: 1.2;
+      letter-spacing: -1.2px;
+      margin-bottom: 16px;
+    }
+
+    .section-title span {
+      color: var(--orange);
+    }
+
+    .section-description {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-heading .section-description {
+      margin: 0 auto;
+    }
+
+    /* ===== BUTTONS (exactly as original) ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 23px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      border: 2px solid transparent;
+      transition: 0.25s ease;
+    }
+
+    .btn-orange {
+      background: var(--orange);
+      color: var(--white);
+      border-color: var(--orange);
+    }
+
+    .btn-orange:hover {
+      background: var(--orange-dark);
+      border-color: var(--orange-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: var(--white);
+      color: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .btn-outline:hover {
+      background: var(--blue);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* ===== HERO SECTION (original styles) ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 68px 0 72px;
+      background:
+        radial-gradient(circle at 90% 10%, #dceeff 0, transparent 35%),
+        linear-gradient(115deg, #ffffff 45%, #f1f8ff 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 14px;
+      border: 1px solid #ffdec9;
+      background: #fff5ee;
+      color: var(--orange-dark);
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 61px);
+      line-height: 1.08;
+      color: var(--blue);
+      letter-spacing: -2.5px;
+      margin-bottom: 23px;
+    }
+
+    .hero h1 span {
+      color: var(--orange);
+    }
+
+    .hero-description {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 510px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-bottom: 36px;
+    }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .trust-avatars {
+      display: flex;
+      align-items: center;
+    }
+
+    .trust-avatars span {
+      width: 35px;
+      height: 35px;
+      margin-left: -8px;
+      border-radius: 50%;
+      border: 2px solid white;
+      background: var(--blue-light);
+      color: var(--blue);
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+    }
+
+    .trust-avatars span:first-child {
+      margin-left: 0;
+    }
+
+    .trust-copy strong {
+      display: block;
+      color: var(--blue);
+      font-size: 13px;
+    }
+
+    .trust-copy small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      border-radius: 26px 26px 100px 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-floating-card {
+      position: absolute;
+      left: -22px;
+      bottom: 26px;
+      background: white;
+      padding: 18px 21px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      max-width: 240px;
+    }
+
+    .floating-icon {
+      width: 48px;
+      height: 48px;
+      background: #fff0e5;
+      color: var(--orange);
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      font-size: 21px;
+      flex-shrink: 0;
+    }
+
+    .hero-floating-card strong {
+      display: block;
+      color: var(--blue);
+      font-size: 13px;
+    }
+
+    .hero-floating-card small {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* ===== REVEAL ANIMATION (base) ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE (exactly as original) ===== */
+    @media (max-width: 1000px) {
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+
+      .hero-image {
+        height: 390px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .section {
+        padding: 58px 0;
+      }
+
+      .hero {
+        padding: 46px 0 55px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: clamp(36px, 10vw, 49px);
+        letter-spacing: -1.8px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .hero-image {
+        height: 330px;
+        border-radius: 20px 20px 65px 20px;
+      }
+
+      .hero-floating-card {
+        left: 12px;
+        bottom: 14px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        width: 91%;
+      }
+
+      .hero-actions .btn {
+        padding: 12px 14px;
+        font-size: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== HERO SECTION (complete, unchanged logic & markup) ===== -->
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <!-- LEFT CONTENT -->
+      <div class="hero-content reveal">
+        <div class="hero-badge">
+          <i class="fa-solid fa-box-open"></i>
+          Moving Supply Store
+        </div>
+
+        <h1>
+          Safiya <span>Packers</span> &amp; Movers
+        </h1>
+
+        <p class="hero-description">
+          Safiya Packers and Movers is one of the best goods moving
+          companies in Pune. We serve individuals, corporates and
+          industries with reliable packing, moving and transportation
+          solutions.
+        </p>
+
+        <div class="hero-actions">
+          <a href="tel:+918698017041" class="btn btn-orange">
+            <i class="fa-solid fa-phone"></i>
+            Contact Us
+          </a>
+
+          <a href="#services" class="btn btn-outline">
+            Explore Services
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="trust-avatars">
+            <span><i class="fa-solid fa-house"></i></span>
+            <span><i class="fa-solid fa-building"></i></span>
+            <span><i class="fa-solid fa-truck"></i></span>
+          </div>
+          <div class="trust-copy">
+            <strong>Homes, Offices &amp; Industries</strong>
+            <small>Moving and transportation solutions</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT VISUAL -->
+      <div class="hero-visual reveal">
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?auto=format&fit=crop&w=1000&q=85"
+          alt="Moving boxes and packing supplies"
+          fetchpriority="high"
+        >
+
+        <div class="hero-floating-card">
+          <div class="floating-icon">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div>
+            <strong>Moving Made Easier</strong>
+            <small>Reliable service, every day</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== REVEAL ANIMATION SCRIPT (exactly as original, only for .reveal) ===== -->
+  <script>
+    (function() {
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12
+        });
+
+        revealElements.forEach(function(element) {
+          observer.observe(element);
+        });
+      } else {
+        revealElements.forEach(function(element) {
+          element.classList.add("visible");
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

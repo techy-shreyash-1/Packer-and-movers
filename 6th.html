@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Safiya Packers & Movers</title>
+
+  <!-- Google Fonts & Font Awesome (same as original) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* ===== ROOT VARIABLES (identical to original) ===== */
+    :root {
+      --orange: #ff6500;
+      --orange-dark: #e95700;
+      --blue: #073b70;
+      --blue-light: #edf6ff;
+      --white: #ffffff;
+      --text: #24364b;
+      --muted: #66758a;
+      --border: #e5edf5;
+      --shadow: 0 12px 35px rgba(7, 59, 112, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--orange);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    /* ===== BUTTONS (exactly as original) ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 23px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      border: 2px solid transparent;
+      transition: 0.25s ease;
+    }
+
+    .btn-orange {
+      background: var(--orange);
+      color: var(--white);
+      border-color: var(--orange);
+    }
+
+    .btn-orange:hover {
+      background: var(--orange-dark);
+      border-color: var(--orange-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ===== CONTACT CTA (exactly as original) ===== */
+    .contact-section {
+      padding: 25px 0 80px;
+    }
+
+    .contact-banner {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 0.75fr;
+      align-items: center;
+      background: var(--blue);
+      border-radius: 24px;
+      overflow: hidden;
+      min-height: 330px;
+    }
+
+    .contact-content {
+      position: relative;
+      z-index: 2;
+      padding: 45px;
+    }
+
+    .contact-content .section-label {
+      color: #ffb17d;
+    }
+
+    .contact-content h2 {
+      color: white;
+      font-size: clamp(27px, 3vw, 38px);
+      line-height: 1.25;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+
+    .contact-content h2 span {
+      color: #ff8b40;
+    }
+
+    .contact-content p {
+      color: #d9e8f8;
+      font-size: 14px;
+      margin-bottom: 25px;
+      max-width: 480px;
+    }
+
+    .contact-image {
+      height: 330px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      mask-image: linear-gradient(to right, transparent 0%, black 28%);
+    }
+
+    /* ===== CONTACT DETAILS (exactly as original) ===== */
+    .contact-details {
+      padding-top: 34px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: white;
+    }
+
+    .contact-detail i {
+      color: var(--orange);
+      font-size: 21px;
+      margin-top: 3px;
+    }
+
+    .contact-detail h3 {
+      color: var(--blue);
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .contact-detail p,
+    .contact-detail a {
+      color: var(--muted);
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-detail a:hover {
+      color: var(--orange);
+    }
+
+    /* ===== REVEAL ANIMATION (base) ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE (exactly as original) ===== */
+    @media (max-width: 720px) {
+      .contact-banner {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-content {
+        padding: 32px 25px;
+      }
+
+      .contact-image {
+        height: 240px;
+        mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+      }
+
+      .contact-details {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        width: 91%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== CONTACT CTA + CONTACT DETAILS (complete, unchanged markup) ===== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+
+      <div class="contact-banner reveal">
+        <div class="contact-content">
+          <span class="section-label">Let's get moving</span>
+          <h2>
+            Need Help with Moving?
+            <span>We're Here for You.</span>
+          </h2>
+          <p>
+            Contact Safiya Packers &amp; Movers for information
+            about moving supplies, household relocation, office
+            shifting and transportation services.
+          </p>
+
+          <a href="tel:+918698017041" class="btn btn-orange">
+            <i class="fa-solid fa-phone"></i>
+            Call +91 8698017041
+          </a>
+        </div>
+
+        <img
+          class="contact-image"
+          src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?auto=format&fit=crop&w=900&q=85"
+          alt="Packing and moving supplies"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="contact-details reveal">
+
+        <div class="contact-detail">
+          <i class="fa-solid fa-phone-volume"></i>
+          <div>
+            <h3>Call Us</h3>
+            <a href="tel:+918698017041">+91 8698017041</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <h3>Visit Our Location</h3>
+            <p>
+              Survey No. 165, Sadesatara, Nali Road, near Datta Temple,
+              Malwadi, Hadapsar, Pune, Maharashtra 411028
+            </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Safiya+Packers+and+Movers+Hadapsar+Pune"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Open in Google Maps</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== REVEAL ANIMATION SCRIPT (exactly as original, only for .reveal) ===== -->
+  <script>
+    (function() {
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12
+        });
+
+        revealElements.forEach(function(element) {
+          observer.observe(element);
+        });
+      } else {
+        revealElements.forEach(function(element) {
+          element.classList.add("visible");
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

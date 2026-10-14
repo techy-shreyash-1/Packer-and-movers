@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Choose Us — Safiya Packers & Movers</title>
+
+  <!-- Google Fonts & Font Awesome (same as original) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* ===== ROOT VARIABLES (identical to original) ===== */
+    :root {
+      --orange: #ff6500;
+      --orange-dark: #e95700;
+      --blue: #073b70;
+      --blue-light: #edf6ff;
+      --white: #ffffff;
+      --text: #24364b;
+      --muted: #66758a;
+      --border: #e5edf5;
+      --shadow: 0 12px 35px rgba(7, 59, 112, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--orange);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      color: var(--blue);
+      font-size: clamp(28px, 3.3vw, 42px);
+      line-height: 1.2;
+      letter-spacing: -1.2px;
+      margin-bottom: 16px;
+    }
+
+    .section-title span {
+      color: var(--orange);
+    }
+
+    .section-description {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* ===== BUTTONS (exactly as original) ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 23px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      border: 2px solid transparent;
+      transition: 0.25s ease;
+    }
+
+    .btn-orange {
+      background: var(--orange);
+      color: var(--white);
+      border-color: var(--orange);
+    }
+
+    .btn-orange:hover {
+      background: var(--orange-dark);
+      border-color: var(--orange-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ===== WHY CHOOSE US (exactly as original) ===== */
+    .why-section {
+      background: #f5f9ff;
+      overflow: hidden;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .why-image-wrap {
+      position: relative;
+    }
+
+    .why-image {
+      width: 100%;
+      height: 410px;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    .why-stamp {
+      position: absolute;
+      right: -20px;
+      bottom: 25px;
+      background: var(--orange);
+      color: white;
+      border-radius: 17px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .why-stamp strong {
+      display: block;
+      font-size: 25px;
+      line-height: 1.2;
+    }
+
+    .why-stamp small {
+      font-size: 11px;
+    }
+
+    .why-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px 18px;
+      margin-top: 32px;
+    }
+
+    .why-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .why-point i {
+      width: 37px;
+      height: 37px;
+      display: grid;
+      place-items: center;
+      background: white;
+      color: var(--orange);
+      border: 1px solid #ffe2cf;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    .why-point strong {
+      display: block;
+      color: var(--blue);
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .why-point p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* ===== REVEAL ANIMATION (base) ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE (exactly as original) ===== */
+    @media (max-width: 1000px) {
+      .why-grid {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .section {
+        padding: 58px 0;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-image {
+        height: 310px;
+      }
+
+      .why-stamp {
+        right: 12px;
+      }
+
+      .why-points {
+        gap: 20px 12px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        width: 91%;
+      }
+
+      .why-points {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== WHY CHOOSE US (complete, unchanged markup) ===== -->
+  <section class="section why-section">
+    <div class="container why-grid">
+
+      <div class="why-image-wrap reveal">
+        <img
+          class="why-image"
+          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85"
+          alt="A neatly organized home ready for moving"
+          loading="lazy"
+        >
+
+        <div class="why-stamp">
+          <strong>24/7</strong>
+          <small>Service Availability</small>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <span class="section-label">Why choose us</span>
+
+        <h2 class="section-title">
+          Your Trusted <span>Moving Partner</span> in Pune
+        </h2>
+
+        <p class="section-description">
+          From household relocations to business transportation,
+          we aim to make every move convenient with dependable
+          service and careful handling.
+        </p>
+
+        <div class="why-points">
+
+          <div class="why-point">
+            <i class="fa-solid fa-box"></i>
+            <div>
+              <strong>Quality Packing</strong>
+              <p>Organized packing for your moving needs.</p>
+            </div>
+          </div>
+
+          <div class="why-point">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div>
+              <strong>Careful Handling</strong>
+              <p>Attention to your belongings during transit.</p>
+            </div>
+          </div>
+
+          <div class="why-point">
+            <i class="fa-solid fa-truck"></i>
+            <div>
+              <strong>Moving Solutions</strong>
+              <p>Transportation for homes and businesses.</p>
+            </div>
+          </div>
+
+          <div class="why-point">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+              <strong>Customer Support</strong>
+              <p>Contact our team to discuss your requirements.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="margin-top:30px">
+          <a href="#contact" class="btn btn-orange">
+            Talk to Our Team
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== REVEAL ANIMATION SCRIPT (exactly as original, only for .reveal) ===== -->
+  <script>
+    (function() {
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12
+        });
+
+        revealElements.forEach(function(element) {
+          observer.observe(element);
+        });
+      } else {
+        revealElements.forEach(function(element) {
+          element.classList.add("visible");
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

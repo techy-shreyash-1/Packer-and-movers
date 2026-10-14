@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Details &amp; Hours – Safiya Packers &amp; Movers</title>
+  <style>
+    :root {
+      --orange: #f58220;
+      --orange-dark: #d96508;
+      --blue: #123b70;
+      --blue-deep: #0b2850;
+      --white: #ffffff;
+      --pale: #f4f8fc;
+      --ink: #172b43;
+      --muted: #62738a;
+      --line: #e0e8f1;
+      --shadow: 0 18px 45px rgba(18, 59, 112, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+
+    /* ===== CONTACT DETAILS & HOURS SECTION ONLY ===== */
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+      width: min(1160px, 90%);
+      margin: 0 auto;
+    }
+    h2 {
+      color: var(--blue);
+      font-size: clamp(25px, 3vw, 34px);
+      line-height: 1.2;
+      margin: 0 0 10px;
+    }
+    .info-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+    .card-heading {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+    .icon-box {
+      width: 52px; height: 52px; flex: 0 0 52px;
+      display: grid; place-items: center;
+      border-radius: 14px;
+      color: white; background: var(--orange); font-size: 24px;
+    }
+    .card-heading h2 { font-size: 23px; margin: 0; }
+    .card-heading p { margin: 3px 0 0; color: var(--muted); font-size: 14px; }
+    .detail-row {
+      display: flex;
+      gap: 13px;
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+    }
+    .detail-symbol {
+      color: var(--orange-dark);
+      font-size: 21px;
+      width: 25px;
+      flex: 0 0 25px;
+    }
+    .detail-row h3 {
+      margin: 0 0 3px;
+      color: var(--blue);
+      font-size: 15px;
+    }
+    .detail-row p, .detail-row address {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      font-style: normal;
+      overflow-wrap: anywhere;
+    }
+    .detail-row a {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .detail-row a:hover {
+      color: var(--orange-dark);
+      text-decoration: underline;
+    }
+    .hours-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      color: #176b45; background: #e9f8f0; border: 1px solid #c8eed9;
+      padding: 7px 11px; border-radius: 30px; font-size: 13px; font-weight: 800;
+      margin: 0 0 15px;
+    }
+    .hours-list { list-style: none; padding: 0; margin: 0; }
+    .hours-list li {
+      display: flex; justify-content: space-between; gap: 12px;
+      padding: 10px 0; border-top: 1px solid var(--line); font-size: 15px;
+    }
+    .hours-list li span:first-child { color: var(--muted); }
+    .hours-list li strong { color: var(--blue); }
+    .hours-note {
+      margin: 17px 0 0; padding: 13px 15px;
+      border-left: 4px solid var(--orange); background: var(--pale);
+      color: var(--blue); border-radius: 0 8px 8px 0; font-size: 14px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 760px) {
+      .details-grid { grid-template-columns: 1fr; }
+      .info-card { padding: 22px; }
+    }
+    @media (max-width: 420px) {
+      .hours-list li { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== CONTACT DETAILS & BUSINESS HOURS SECTION ===== -->
+  <section class="details-grid" aria-label="Contact details and business hours">
+    <article class="info-card">
+      <div class="card-heading">
+        <span class="icon-box" aria-hidden="true">⌖</span>
+        <div>
+          <h2>Contact Details</h2>
+          <p>Reach us or plan your visit</p>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-symbol" aria-hidden="true">⌂</span>
+        <div>
+          <h3>Business Name</h3>
+          <p>Safiya Packers &amp; Movers</p>
+        </div>
+      </div>
+      <div class="detail-row">
+        <span class="detail-symbol" aria-hidden="true">📍</span>
+        <div>
+          <h3>Address</h3>
+          <address>Survey No.165, Sadesatara, Nali Road, near Datta Temple, Malwadi, Hadapsar, Pune, Maharashtra, 411028</address>
+        </div>
+      </div>
+      <div class="detail-row">
+        <span class="detail-symbol" aria-hidden="true">☎</span>
+        <div>
+          <h3>Phone Number</h3>
+          <p><a href="tel:9960663746">99606 63746</a></p>
+        </div>
+      </div>
+      <div class="detail-row">
+        <span class="detail-symbol" aria-hidden="true">↗</span>
+        <div>
+          <h3>Directions</h3>
+          <p><a href="https://www.google.com/maps/dir/?api=1&destination=Safiya+Packers+%26+Movers%2C+Survey+No.165%2C+Sadesatara%2C+Nali+Road%2C+near+Datta+Temple%2C+Malwadi%2C+Hadapsar%2C+Pune%2C+Maharashtra%2C+411028" target="_blank" rel="noopener noreferrer">Open directions in Google Maps</a></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="info-card">
+      <div class="card-heading">
+        <span class="icon-box" aria-hidden="true">◷</span>
+        <div>
+          <h2>Business Hours</h2>
+          <p>We're available whenever you need us</p>
+        </div>
+      </div>
+      <div class="hours-badge"><span aria-hidden="true">●</span> Open 24 hours</div>
+      <ul class="hours-list">
+        <li><span>Monday</span><strong>24 hours</strong></li>
+        <li><span>Tuesday</span><strong>24 hours</strong></li>
+        <li><span>Wednesday</span><strong>24 hours</strong></li>
+        <li><span>Thursday</span><strong>24 hours</strong></li>
+        <li><span>Friday</span><strong>24 hours</strong></li>
+        <li><span>Saturday</span><strong>24 hours</strong></li>
+        <li><span>Sunday</span><strong>24 hours</strong></li>
+      </ul>
+      <p class="hours-note">You can call us any time, day or night, for your moving and transportation enquiries.</p>
+    </article>
+  </section>
+
+</body>
+</html>

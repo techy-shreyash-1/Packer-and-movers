@@ -1,0 +1,404 @@
+<!-- ════ SECTION 7: Footer ════ -->
+<style>
+  .ftr {
+    background: linear-gradient(180deg, #123f70 0%, #0b2948 100%);
+    color: #ffffff;
+    margin-top: 0;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  }
+  .ftr-top {
+    padding: 0 0 40px;
+  }
+  .ftr-wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .ftr-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1.7fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .ftr-brand .logo-text .name {
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: .03em;
+    line-height: 1.1;
+  }
+  .ftr-brand .logo-text .tag {
+    font-size: .68rem;
+    color: #d9e8f7;
+    letter-spacing: .02em;
+  }
+  .ftr-brand {
+    margin-bottom: 16px;
+    padding-top: 30px;
+  }
+  .ftr-brand p {
+    font-size: .88rem;
+    line-height: 1.6;
+    color: #e4edf7;
+    max-width: 380px;
+    margin-top: 14px;
+  }
+  .ftr-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .ftr-logo-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff8a00, #e96500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .ftr-logo-mark svg {
+    width: 20px;
+    height: 20px;
+  }
+  .ftr-logo-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .ftr-contact-list {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .ftr-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: .86rem;
+    color: #ffffff;
+    line-height: 1.5;
+  }
+  .ftr-contact-list svg {
+    width: 17px;
+    height: 17px;
+    color: #ff8a00;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .ftr-contact-list a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .ftr-contact-list a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .ftr-contact-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 22px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 20px 40px rgba(0,0,0,.25);
+  }
+  .ftr-contact-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .ftr-phone-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #ff7900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .ftr-phone-circle svg {
+    width: 22px;
+    height: 22px;
+    color: #fff;
+  }
+  .ftr-contact-card h3 {
+    color: #123f70;
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin-bottom: 3px;
+  }
+  .ftr-contact-card span {
+    font-size: .85rem;
+    color: #5b6b7c;
+  }
+  .ftr-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: .85rem;
+    border: 1.5px solid transparent;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .ftr-btn-outline {
+    background: transparent;
+    color: #123f70;
+    border-color: #123f70;
+  }
+  .ftr-btn-outline:hover {
+    background: #ff7900;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  .ftr-btn-primary {
+    background: #ff7900;
+    color: #fff;
+  }
+  .ftr-btn-primary:hover {
+    background: #e96500;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(255,121,0,.25);
+  }
+  .ftr-bottom {
+    border-top: 1px solid rgba(255,255,255,.12);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .ftr-bottom-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .ftr-bottom p {
+    font-size: .82rem;
+    color: #d9e8f7;
+    margin: 0;
+  }
+  .ftr-dev-credit {
+    font-size: .78rem;
+    color: #d9e8f7;
+  }
+  .ftr-dev-credit a {
+    color: #ff8a00;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+  .ftr-dev-credit a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  .ftr-links {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .ftr-links a {
+    font-size: .82rem;
+    color: #d9e8f7;
+    text-decoration: none;
+  }
+  .ftr-links a:hover {
+    color: #fff;
+  }
+  .ftr-to-top {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+  }
+  .ftr-to-top svg {
+    width: 16px;
+    height: 16px;
+    color: #fff;
+  }
+  .ftr-to-top:hover {
+    background: rgba(255,255,255,.1);
+  }
+
+  @media (max-width: 1000px) {
+    .ftr-grid { grid-template-columns: 1fr; }
+    .ftr-contact-list { align-items: center; }
+    .ftr-contact-list li { text-align: left; }
+    .ftr-brand p { max-width: 100%; }
+  }
+  .mobile-break {
+    display: none;
+  }
+
+  @media (max-width: 760px) {
+    .mobile-break {
+      display: block;
+    }
+    .ftr-wrap { padding: 0 20px !important; }
+    .ftr-top { padding: 0 0 30px; }
+    .ftr-brand {
+      padding-top: 20px;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    .ftr-contact-card {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 18px 20px;
+    }
+    .ftr-contact-left { width: 100%; }
+    .ftr-contact-card .ftr-btn { width: 100%; justify-content: center; }
+    .ftr-contact-actions { width: 100%; justify-content: center; }
+    
+    .ftr-bottom {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 12px;
+      margin-top: 20px;
+      padding-top: 15px;
+    }
+    .ftr-bottom-left {
+      align-items: center;
+      text-align: center;
+      gap: 6px;
+    }
+    .ftr-bottom p {
+      width: 100%;
+      text-align: center;
+    }
+    .ftr-links {
+      width: 100%;
+      justify-content: center;
+      gap: 18px;
+      row-gap: 8px;
+      flex-wrap: wrap;
+    }
+    .ftr-links a { padding: 4px 0; }
+
+    .ftr-contact-list {
+      align-items: flex-start;
+      width: 100%;
+      gap: 14px;
+    }
+    .ftr-contact-list li {
+      width: 100%;
+      text-align: left;
+      align-items: center;
+    }
+    .ftr-contact-list li span {
+      flex: 1;
+      word-break: break-word;
+      min-width: 0;
+    }
+  }
+</style>
+
+<footer class="ftr" id="contact">
+  <div class="ftr-wrap ftr-top">
+    <div class="ftr-grid">
+      <div class="ftr-brand">
+        <a href="#" class="ftr-logo">
+          <span class="ftr-logo-mark">
+            <img src="https://safiyapackersandmovers.orgscale.in/wp-content/uploads/sites/15/2026/10/logo.png" alt="Safiya Packers & Movers">
+          </span>
+          <span class="logo-text">
+            <div class="name">SAFIYA PACKERS &amp; MOVERS</div>
+            <div class="tag">Safe, Secure &amp; Reliable Moving Services</div>
+          </span>
+        </a>
+        <p>Safiya Packers &amp; Movers provides dependable packing, moving and transportation services, helping make every move safe, smooth and stress-free.</p>
+
+        <ul class="ftr-contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.9 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+            <span><a href="tel:+919960663746">+91 99606 63746</a></span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6 12 13 2 6"/><path d="M2 6h20v12H2z"/></svg>
+            <span><a href="https://wa.me/919960663746" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a></span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Survey No. 165, Sadesatara, Nali Road, near Datta Temple, Malwadi, Hadapsar, Pune, Maharashtra 411028</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="ftr-contact-card">
+        <div class="ftr-contact-left">
+          <span class="ftr-phone-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.9 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+          </span>
+          <div>
+            <h3>Planning a move?</h3>
+            <span>Contact us for safe and reliable packing &amp; moving services.</span>
+          </div>
+        </div>
+        <div class="ftr-contact-actions" style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a href="https://wa.me/919960663746?text=Hello%20Safiya%20Packers%20%26%20Movers%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="ftr-btn ftr-btn-outline">WhatsApp Enquiry</a>
+          <a href="tel:+919960663746" class="ftr-btn ftr-btn-primary">Call Us: 9960663746</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ftr-wrap ftr-bottom">
+    <div class="ftr-bottom-left">
+      <p>© <span id="ftrYear">2026</span> Safiya Packers &amp; Movers. All Rights Reserved.</p>
+      <div class="ftr-dev-credit">
+        Design and Developed by <a href="https://forthicon.com/" target="_blank" rel="noopener noreferrer">Forthicon Pvt Ltd</a>
+      </div>
+    </div>
+
+    <div class="ftr-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <button class="ftr-to-top" id="ftrToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Footer JavaScript
+  (function() {
+    // Back to top
+    var toTop = document.getElementById('ftrToTop');
+    if (toTop) {
+      toTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Current year
+    var yearEl = document.getElementById('ftrYear');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  })();
+</script>

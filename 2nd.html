@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benefits Strip — Safiya Packers & Movers</title>
+
+  <!-- Google Fonts & Font Awesome (same as original) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* ===== ROOT VARIABLES (identical to original) ===== */
+    :root {
+      --orange: #ff6500;
+      --orange-dark: #e95700;
+      --blue: #073b70;
+      --blue-light: #edf6ff;
+      --white: #ffffff;
+      --text: #24364b;
+      --muted: #66758a;
+      --border: #e5edf5;
+      --shadow: 0 12px 35px rgba(7, 59, 112, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* ===== BENEFITS STRIP (exactly as original) ===== */
+    .benefits {
+      background: var(--blue);
+      color: white;
+      padding: 27px 0;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 5px 12px;
+    }
+
+    .benefit-icon {
+      color: var(--orange);
+      font-size: 27px;
+      flex-shrink: 0;
+    }
+
+    .benefit strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .benefit small {
+      display: block;
+      color: #d7e8fa;
+      font-size: 11px;
+    }
+
+    /* ===== RESPONSIVE (exactly as original) ===== */
+    @media (max-width: 720px) {
+      .benefits-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 10px;
+      }
+
+      .benefit {
+        padding: 5px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        width: 91%;
+      }
+
+      .benefit-icon {
+        font-size: 22px;
+      }
+
+      .benefit strong {
+        font-size: 11px;
+      }
+
+      .benefit small {
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== BENEFITS STRIP (complete, unchanged markup) ===== -->
+  <section class="benefits">
+    <div class="container benefits-grid">
+
+      <div class="benefit">
+        <i class="fa-solid fa-box benefit-icon"></i>
+        <div>
+          <strong>Quality Packing</strong>
+          <small>Careful handling of goods</small>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <i class="fa-solid fa-truck-fast benefit-icon"></i>
+        <div>
+          <strong>Safe Transportation</strong>
+          <small>Reliable moving solutions</small>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <i class="fa-solid fa-clock benefit-icon"></i>
+        <div>
+          <strong>Available 24/7</strong>
+          <small>Monday to Sunday</small>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <i class="fa-solid fa-star benefit-icon"></i>
+        <div>
+          <strong>4.8 / 5 Rating</strong>
+          <small>127+ Google reviews*</small>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
